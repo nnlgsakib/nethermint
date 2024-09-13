@@ -80,3 +80,6 @@ dependency-graph.png
 
 # OpenZeppelin contracts
 contracts/@openzeppelin/*
+
+./node_modules
+./node
