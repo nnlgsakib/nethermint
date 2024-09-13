@@ -4,7 +4,7 @@ const { ethers } = require('ethers');
 const provider = new ethers.providers.JsonRpcProvider('http://localhost:8547');
 
 // Wallet private key (ensure this is a test account and keep your private key secure)
-const privateKey = '9F35165720CD5FC961A8CF2A60B269CF5787B378600E7A752A89E47FE9EE1BE1';
+const privateKey = '6F2762ACDBFF669210389784C4BD6C875927AEF78E26E4248B35E7244B605805';
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // The recipient address (replace with the recipient's address)

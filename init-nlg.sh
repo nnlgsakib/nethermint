@@ -37,7 +37,8 @@ BLOCK_GAS_LIMIT="2000000000000000"                  # Set a reasonable block gas
   --website "https://nlg.com" \
   --identity "" \
   --security-contact "security@nlg.com" \
-  --pubkey $(./nlg tendermint show-validator --home node)
+  --pubkey $(./nlg tendermint show-validator --home node) \
+  --gas-prices 0.3nlgton
 
 # Create the gentx directory if it doesn't exist
 mkdir -p node/config/gentx
@@ -76,4 +77,5 @@ jq '.consensus_params["block"]["max_gas"]="'${BLOCK_GAS_LIMIT}'"' $PWD/node/conf
   --json-rpc.gas-cap 25000000 \
   --evm.max-tx-gas-wanted 2000000 \
   --evm.tracer json \
-  --api.enable true
+  --api.enable true \
+  --address tcp://0.0.0.0:26658
